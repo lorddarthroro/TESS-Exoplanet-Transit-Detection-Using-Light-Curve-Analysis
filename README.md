@@ -91,10 +91,12 @@ After this, I applied from filtering to remove outliars, although the results ou
 
 Finally, I applied a fold, which is a way of 'rearranging time' so that a repeating signal lines up with itself. Instead of plotting flux versus absolute time, we plot it versus phase, where time is taken modulo a chosen period. This effectively “wraps” the light curve every X days so that all transits occurring at the same point in their orbit stack on top of each other.
 
-This can be hard to understand, but astropy has a really helpful visualization (below). In the first image, the data is shown before folding. In the second, it is folded on a period of 2 days, so each point represents where it sits within that repeating cycle. The x-axis is now a phase-like scale from 0 to 2 days, meaning that events like transits line up at the same position in each cycle.
+This can be hard to understand, but astropy has a really helpful visualization (below). In the left image, the data is shown before folding. In the right, it is folded on a period of 2 days, so each point represents where it sits within that repeating cycle. The x-axis is now a phase-like scale from 0 to 2 days, meaning that events like transits line up at the same position in each cycle.
 
-<img width="445" height="432" alt="image" src="https://github.com/user-attachments/assets/fd056be2-389d-4bab-86e9-e1588e97a8e1" />
-<img width="445" height="432" alt="image" src="https://github.com/user-attachments/assets/99f6b55b-758c-4b08-bb9a-238ed634e201" />
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/fd056be2-389d-4bab-86e9-e1588e97a8e1" width="48%" />
+  <img src="https://github.com/user-attachments/assets/99f6b55b-758c-4b08-bb9a-238ed634e201" width="48%" />
+</p>
 
 Once folded on the time interval of 6.27 days (the known orbital period of Pi Mensae c) , this is our new data graph:
 
