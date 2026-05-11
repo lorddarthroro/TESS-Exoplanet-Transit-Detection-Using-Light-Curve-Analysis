@@ -72,6 +72,14 @@ Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%
 5. Compute periodogram to search for periodic signals
 ---
 ## 🪐🔭 Findings
+
+### TIC 261136679
+I analyzed TESS light curve data for TIC 261136679, which corresponds to star Pi Mensae (also known as HD 39091), known to host 3 exoplanets (Pi Mensae b, Pi Mensae c, and Pi Mensae d). This can provide an effective baseline as I know what to expect from this data, making the effective goal of this analysis specifically to see if we can find evidence of the existence of an exoplanet given what we already know. 
+
+<img width="777" height="376" alt="image" src="https://github.com/user-attachments/assets/02d0f68e-56b0-4f04-b3b2-c13a9e4080bb" />
+
+
+
 ---
 
 ## 🧰 Tools & Libraries
@@ -108,3 +116,4 @@ https://www.youtube.com/watch?v=hEr1dp3wC20
 https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%3F
 https://www.mathworks.com/discovery/digital-signal-processing.html?utm_source=chatgpt.com
 https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
+https://www.hughosborn.co.uk/2021/01/04/so-you-think-youve-found-an-exoplanet/
