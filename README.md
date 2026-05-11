@@ -15,16 +15,9 @@ To build a simple end-to-end pipeline for:
 - Analyzing periodicity using frequency-domain methods
 
 ---
-
-## 🧰 Tools & Libraries
-
-- Python
-- lightkurve
-- astropy
-- numpy
-- matplotlib
-
+## 📚 Background / Theory
 ---
+
 
 ## 📊 Method Overview
 
@@ -33,6 +26,16 @@ To build a simple end-to-end pipeline for:
 3. Apply flattening to remove long-term trends
 4. Visualize light curve for potential transit events
 5. Compute periodogram to search for periodic signals
+
+---
+
+## 🧰 Tools & Libraries
+
+- Python
+- lightkurve
+- astropy
+- numpy
+- matplotlib
 
 ---
 
