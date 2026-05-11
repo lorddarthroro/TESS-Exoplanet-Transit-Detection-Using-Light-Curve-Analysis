@@ -4,6 +4,8 @@ This project explores time-series photometric data from the NASA Transiting Exop
 
 The workflow focuses on analyzing stellar light curves to detect periodic dips in brightness that may indicate the presence of orbiting exoplanets.
 
+This project is based on the NASA HEASARC tutorial [“How to Find an Exoplanet with TESS Data”](https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html) and uses Lightkurve to reproduce and extend the analysis of Pi Mensae c (Huang et al. 2018). Additional interpretation and signal-processing discussion were added independently.
+
 ---
 
 ## 🔬 Objective
