@@ -144,11 +144,19 @@ This project is intended for learning and exploratory data analysis in astronomi
 
 ## Works Cited
 https://imagine.gsfc.nasa.gov/science/toolbox/timing1.html
+
 https://medium.com/@msilvertant/hunting-exoplanets-using-the-transit-method-918e764e5576
+
 https://www.youtube.com/watch?v=hEr1dp3wC20
+
 https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%3F
+
 https://www.mathworks.com/discovery/digital-signal-processing.html?utm_source=chatgpt.com
+
 https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
+
 https://www.hughosborn.co.uk/2021/01/04/so-you-think-youve-found-an-exoplanet/
+
 https://docs.astropy.org/en/stable/timeseries/index.html
+
 https://en.wikipedia.org/wiki/Fourier_series
