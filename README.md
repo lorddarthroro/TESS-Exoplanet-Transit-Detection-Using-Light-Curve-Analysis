@@ -66,7 +66,7 @@ Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%
 ## 📊 Method Overview
 
 1. Load TESS light curve data (FITS format)
-2. Remove missing values and normalize flux
+2. Remove missing values and normalize flux (rate at which electromagnetic energy (light) arrives per unit area, essentially a measure for brightness)
 3. Apply flattening to remove long-term trends
 4. Visualize light curve for potential transit events
 5. Compute periodogram to search for periodic signals
