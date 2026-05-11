@@ -107,3 +107,4 @@ https://medium.com/@msilvertant/hunting-exoplanets-using-the-transit-method-918e
 https://www.youtube.com/watch?v=hEr1dp3wC20
 https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%3F
 https://www.mathworks.com/discovery/digital-signal-processing.html?utm_source=chatgpt.com
+https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
