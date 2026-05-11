@@ -24,7 +24,7 @@ Exoplanets are an area of astronomy that have always fascinated me. I have very 
 Exoplanets, as noted above, are not able to be easily identified and spotted by simply swiveling a sufficiently high power telescope around. They are far too dim and tiny, especially given their relative nearness to their host stars. Instead, the way exoplanets are typically 'discovered' is by identifying periodic trends in a star's **brightness over time**, also known as a **Light Curve**. A star's light curve is usually obtained by using Photometry to measure the brightness of a star, which is then done multiple times over a given period.   
 
 <img width="686" height="386" alt="image" src="https://github.com/user-attachments/assets/21eaa843-a0cd-4f56-b2d3-7280a3ef70a6" />
-(image source: [AstroPhil](https://www.youtube.com/@AstroPhil2000) on Youtube)
+Image source: [AstroPhil](https://www.youtube.com/@AstroPhil2000) on Youtube
 
 
 Regular, periodic dips in these light curves can be indicative of an exoplanet. This method of identifying exoplanets is known as **The Transit Method**.
