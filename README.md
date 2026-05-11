@@ -74,10 +74,40 @@ Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%
 ## 🪐🔭 Findings
 
 ### TIC 261136679
+Note: this exploration in partiular closely follows https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html with a few alterations  
 I analyzed TESS light curve data for TIC 261136679, which corresponds to star Pi Mensae (also known as HD 39091), known to host 3 exoplanets (Pi Mensae b, Pi Mensae c, and Pi Mensae d). This can provide an effective baseline as I know what to expect from this data, making the effective goal of this analysis specifically to see if we can find evidence of the existence of an exoplanet given what we already know. 
 
-<img width="777" height="376" alt="image" src="https://github.com/user-attachments/assets/02d0f68e-56b0-4f04-b3b2-c13a9e4080bb" />
+Loading the data in using the lightkurve library, we can 'flatten' the data to remove slow, smooth variations that are likely caused by factors such as instrumental drift, long-term stelllar variability, etc. Flattening effectively removes slow variations over a longer time period in favor of short-term changes (including transits). Graphing after this flattening results in the following graph. 
 
+<img width="777" height="376" alt="image" src="https://github.com/user-attachments/assets/9ca50c97-4beb-4961-a5cf-5ff5f2a6b46d" />
+
+We can see from this graph that there is a period of time with considerable noise between ~1346 and ~1351. Thus, before further analysis, I filtered the data to remove observations in that time frame for cleaner processing.
+
+<img width="781" height="394" alt="image" src="https://github.com/user-attachments/assets/8b5914f1-f1c8-4d76-b7cb-c7351bd5f887" />
+
+After this, I applied from filtering to remove outliars, although the results output (below) didn't seem to alter the graph drastically if at all. This may be because the PDCSAP_FLUX data used is already processed to some degree, but it was worth keeping to be thorough. 
+
+<img width="781" height="394" alt="image" src="https://github.com/user-attachments/assets/51bbbd13-7922-41bb-9c3f-3f27985e232e" />
+
+Finally, I applied a fold, which is a way of 'rearranging time' so that a repeating signal lines up with itself. Instead of plotting flux versus absolute time, we plot it versus phase, where time is taken modulo a chosen period. This effectively “wraps” the light curve every X days so that all transits occurring at the same point in their orbit stack on top of each other.
+
+This can be hard to understand, but astropy has a really helpful visualization (below). In the first image, the data is shown before folding. In the second, it is folded on a period of 2 days, so each point represents where it sits within that repeating cycle. The x-axis is now a phase-like scale from 0 to 2 days, meaning that events like transits line up at the same position in each cycle.
+
+<img width="445" height="432" alt="image" src="https://github.com/user-attachments/assets/fd056be2-389d-4bab-86e9-e1588e97a8e1" />
+<img width="445" height="432" alt="image" src="https://github.com/user-attachments/assets/99f6b55b-758c-4b08-bb9a-238ed634e201" />
+
+Once folded on the time interval of 6.27 days (the known orbital period of Pi Mensae c) , this is our new data graph:
+
+<img width="781" height="394" alt="image" src="https://github.com/user-attachments/assets/52446f4b-de17-4de3-a564-d0ef7490b9b7" />
+
+Here, we can see a pretty clear 'dip' in the normalized flux around the 0 phase (which is what we would expect to see for a transit matching our fold interval). 
+
+Taking this a step further, we can generate a periodogram to see if we can identify a high-peak around the expected time period (6.27 days). It is worth noting, "power" in this case is not a measure of brightness, but rather measures how strongly the light curve becomes periodic when folded at each trial period; higher values indicate a better repeating match.
+
+<img width="751" height="379" alt="image" src="https://github.com/user-attachments/assets/fcaf1cbd-30ee-486e-a034-9d064bb009d0" />
+
+
+As we can see, there is a clear peak at around the expected time. Howver, there are several smaller spikes earlier that could be the result of some noise, or perhaps an artifact of how periodograms are generated. This is a worthy subject of further investigation. 
 
 
 ---
@@ -117,3 +147,4 @@ https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%3F
 https://www.mathworks.com/discovery/digital-signal-processing.html?utm_source=chatgpt.com
 https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
 https://www.hughosborn.co.uk/2021/01/04/so-you-think-youve-found-an-exoplanet/
+https://docs.astropy.org/en/stable/timeseries/index.html
