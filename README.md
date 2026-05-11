@@ -66,7 +66,7 @@ Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%
 ## 📊 Method Overview
 
 1. Load TESS light curve data (FITS format)
-2. Remove missing values and normalize flux (rate at which electromagnetic energy (light) arrives per unit area, essentially a measure for brightness)
+2. Remove missing values and normalize flux (flux is the amount of light received per unit area per unit time from the star, essentially a measure for brightness)
 3. Apply flattening to remove long-term trends
 4. Visualize light curve for potential transit events
 5. Compute periodogram to search for periodic signals
@@ -77,7 +77,7 @@ Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%
 Note: this exploration in partiular closely follows https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html with a few alterations  
 I analyzed TESS light curve data for TIC 261136679, which corresponds to star Pi Mensae (also known as HD 39091), known to host 3 exoplanets (Pi Mensae b, Pi Mensae c, and Pi Mensae d). This can provide an effective baseline as I know what to expect from this data, making the effective goal of this analysis specifically to see if we can find evidence of the existence of an exoplanet given what we already know. 
 
-Loading the data in using the lightkurve library, we can 'flatten' the data to remove slow, smooth variations that are likely caused by factors such as instrumental drift, long-term stelllar variability, etc. Flattening effectively removes slow variations over a longer time period in favor of short-term changes (including transits). Graphing after this flattening results in the following graph. 
+Loading the data in using the lightkurve library, we can 'flatten' the data to remove slow, smooth variations that are likely caused by factors such as instrumental drift, long-term stelllar variability, etc. Flattening removes long-term trends while preserving short-duration features like transits. Graphing after this flattening results in the following graph. 
 
 <img width="777" height="376" alt="image" src="https://github.com/user-attachments/assets/9ca50c97-4beb-4961-a5cf-5ff5f2a6b46d" />
 
@@ -102,15 +102,16 @@ Once folded on the time interval of 6.27 days (the known orbital period of Pi Me
 
 <img width="781" height="394" alt="image" src="https://github.com/user-attachments/assets/52446f4b-de17-4de3-a564-d0ef7490b9b7" />
 
-Here, we can see a pretty clear 'dip' in the normalized flux around the 0 phase (which is what we would expect to see for a transit matching our fold interval). 
+Here, we can see a pretty clear 'dip' in the normalized flux around the 0 phase. This indicates that transit events align consistently when folded at this period, supporting the presence of a periodic signal consistent with a planetary orbit. 
 
 Taking this a step further, we can generate a periodogram to see if we can identify a high-peak around the expected time period (6.27 days). It is worth noting, "power" in this case is not a measure of brightness, but rather measures how strongly the light curve becomes periodic when folded at each trial period; higher values indicate a better repeating match.
 
 <img width="751" height="379" alt="image" src="https://github.com/user-attachments/assets/fcaf1cbd-30ee-486e-a034-9d064bb009d0" />
 
 
-As we can see, there is a clear peak at around the expected time. Howver, there are several smaller spikes earlier that could be the result of some noise, or perhaps an artifact of how periodograms are generated. This is a worthy subject of further investigation. 
+As we can see, there is a clear peak at around the expected orbital period. However, there are several smaller spikes earlier that could be the result of some noise, or perhaps an artifact of how periodograms are generated. This is a worthy subject of further investigation. A cursory investigation and search shows this could be the result of harmonics. In this context, the periodic signals correspond to the fundamental orbital period of the system (6.27 days). This corresponds to a fundamental frequency of _f_ = 1/_P_, where _P_=6.27 days. Harmonics are integer multiples of this frequency (2_f_, 3_f_, etc), and can appear as additional spikes in a periodogram due to non-sinusoidal signal structure. Since the periodogram is in period space, these would show in fractional periods, like _P_/2 and _P_/3 (6.27/2 ≈ 3.14 and 6.27/3 ≈ 2.09) (https://en.wikipedia.org/wiki/Fourier_series).
 
+This would be fun to revisit and understand better in the future, but for now I will leave it at that. 
 
 ---
 
@@ -150,3 +151,4 @@ https://www.mathworks.com/discovery/digital-signal-processing.html?utm_source=ch
 https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
 https://www.hughosborn.co.uk/2021/01/04/so-you-think-youve-found-an-exoplanet/
 https://docs.astropy.org/en/stable/timeseries/index.html
+https://en.wikipedia.org/wiki/Fourier_series
