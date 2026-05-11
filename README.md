@@ -27,6 +27,7 @@ Exoplanets, as noted above, are not able to be easily identified and spotted by 
 Image source: [AstroPhil](https://www.youtube.com/@AstroPhil2000) on Youtube
 
 
+
 Regular, periodic dips in these light curves can be indicative of an exoplanet. This method of identifying exoplanets is known as **The Transit Method**.
 
 <img width="672" height="332" alt="image" src="https://github.com/user-attachments/assets/6bc524d9-bea8-4956-b138-a7f56819fff4" />
