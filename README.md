@@ -26,17 +26,20 @@ Exoplanets, as noted above, are not able to be easily identified and spotted by 
 <img width="686" height="386" alt="image" src="https://github.com/user-attachments/assets/21eaa843-a0cd-4f56-b2d3-7280a3ef70a6" />
 (image source: [AstroPhil](https://www.youtube.com/@AstroPhil2000) on Youtube)
 
+
 Regular, periodic dips in these light curves can be indicative of an exoplanet. This method of identifying exoplanets is known as **The Transit Method**.
 
 <img width="672" height="332" alt="image" src="https://github.com/user-attachments/assets/6bc524d9-bea8-4956-b138-a7f56819fff4" />
 
 Image source: [The Zooniversers Blog](https://blog.zooniverse.org/2015/07/08/introducing-the-planet-hunters-educators-guide/)
 
+
 When a planet transits in front of it's host star (relative to Earth), a tiny percentage of the light from that star is blocked, which appears as a dip on the light curve. This event is called a **transit**. As one can imagine given the size difference between stars and planets, these differences in brightness are relatively small, but not imperceivable. A graph that shows several of these dips in regular intervals is what we would be looking to find.
 
 <img width="576" height="432" alt="image" src="https://github.com/user-attachments/assets/0fdf8711-67f8-480b-a1d9-b6f94159cfba" />
 
 Image source: https://avanderburg.github.io/tutorial/tutorial2.html
+
 
 ---
 
@@ -56,6 +59,7 @@ A **periodogram** is a tool that finds periodic patterns in data, and is especia
 <img width="330" height="204" alt="image" src="https://github.com/user-attachments/assets/69c5fbbd-de33-455c-82e7-7bfd3f16d62d" />
 
 Image source: https://coolwiki.ipac.caltech.edu/index.php/What_is_a_periodogram%3F
+
 
 ---
 
