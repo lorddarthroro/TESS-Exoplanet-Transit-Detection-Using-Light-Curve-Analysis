@@ -115,6 +115,29 @@ As we can see, there is a clear peak at around the expected orbital period. Howe
 
 This would be fun to revisit and understand better in the future, but for now I will leave it at that. 
 
+### TIC 261136679
+Next, I tried using a TIC corresponding with WASP-18, a star with a known 'hot jupiter'. I challenged myself to try to find the oribital period from the data instead of looking it up ahead of time, that way I could validate my results and process. Below are my results, slightly more succinct then the previous section as I've already detailed the general steps above.
+
+After cleaning and normalizing:
+
+<img width="756" height="376" alt="image" src="https://github.com/user-attachments/assets/b75e83ba-7a51-4122-8fde-ba5c57734645" />
+
+Interestingly, the dipping flux pattern here seems pretty clear and frequent! I wonder if this has to do with the size of the planet. After I tried an initial fold with a period of 6.27 (the period in the previous example), I was able to identify several dips, leading me to beleive that the period was likely shorter.
+
+<img width="756" height="376" alt="image" src="https://github.com/user-attachments/assets/b74f4dbf-3aad-4582-8452-0e0b0a02d9b0" />
+
+
+Checking the max power from the periodogram generated, I got a value of ~ 1.882. However, it still showed two dips
+
+<img width="764" height="376" alt="image" src="https://github.com/user-attachments/assets/f11526dd-b772-4a28-a740-b76c1feff7d3" />
+
+Finally, after adjusting the period to be half of the 1.88 (perhaps a harmonic?), I arrived at a period of ~ 0.94, and once I adjusted the epoch time to fit it best, I was greeted with the following result
+
+<img width="756" height="376" alt="image" src="https://github.com/user-attachments/assets/9b16ca59-940b-438a-87eb-dd48b1cd112b" />
+
+This lead me to confidently believe that the period of the known planet must be around 0.94, give or take. And indeed, Wasp-18b has the (in my opinion, suprisingly) low orbital period of 0.941452379 days (https://en.wikipedia.org/wiki/WASP-18b). Success!
+
+
 ---
 
 ## 🧰 Tools & Libraries
