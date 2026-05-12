@@ -135,7 +135,7 @@ Finally, after adjusting the period to be half of the 1.88 (perhaps a harmonic?)
 
 <img width="756" height="376" alt="image" src="https://github.com/user-attachments/assets/9b16ca59-940b-438a-87eb-dd48b1cd112b" />
 
-This lead me to confidently believe that the period of the known planet must be around 0.94, give or take. And indeed, Wasp-18b has the (in my opinion, suprisingly) low orbital period of 0.941452379 days (https://en.wikipedia.org/wiki/WASP-18b). Success!
+Here, the fold seems to suggest that the period of the planet is around 0.94. And indeed, Wasp-18b has the (in my opinion, suprisingly) low orbital period of 0.941452379 days (https://en.wikipedia.org/wiki/WASP-18b). Success!
 
 
 ---
